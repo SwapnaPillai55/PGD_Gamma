@@ -46,7 +46,7 @@ dep_U = 4
 # =========================================================
 # CHECKPOINTS
 # =========================================================
-ckpt_root = './models/model_L10to30'
+ckpt_root = './models/model_L10to30_seed123'
 ckpt_files = sorted([f for f in os.listdir(ckpt_root) if f.startswith('model_state_')])
 
 if len(ckpt_files) == 0:
@@ -183,7 +183,7 @@ for ckpt_name in ckpt_files:
     all_psnr_vals = []
     all_ssim_vals = []
 
-    output_dir = f'./R2_results_fig_gamma_L10to30_URPC_testset/Proposed_{i}'
+    output_dir = f'./R2_results_fig_gamma_L10to30_URPC_testset_seed123/Proposed_{i}'
     os.makedirs(output_dir, exist_ok=True)
 
     # =========================================================
